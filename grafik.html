@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skibidi Grafik</title>
+    </head>
+    <body>
+        <input type="text" id="gr">
+        <button onclick="graficzek()">Guzik</button>
+        <div id="out"></div>
+        <script>
+            function graficzek() {
+                gr1 = document.getElementById('gr').value
+
+                parts = gr1.split(';')
+
+                schedule = parts.slice(1, -1).map(part => part.trim());
+
+                document.getElementById('out').innerText = `grafik:\n ${schedule.join("\n")}`
+            }
+        </script>
+    </body>
+</html>
+
+<!-- 
+Cześć. Przesyłamy aktualizację Twojego grafiku na obecny tydzień:; 03.03.2025 11:00- 18:00; 04.03.2025 12:00- 22:00; 05.03.2025 10:00- 20:00; 06.03.2025 10:00- 18:00; 07.03.2025 10:00- 17:00;. Pozdrawiamy - kadra PKP Intercity! :) 
+-->
